@@ -1,6 +1,6 @@
 .header {
     height: 120px;
-    background-color: #d0011b;
+    background-image: linear-gradient(#f6412e, #fe6333);
 }
 
 .header__navbar {
@@ -13,7 +13,7 @@
     list-style: none;
 }
 
-.header__navbar-item{
+.header__navbar-item {
     position: relative;
     margin: 0 8px;
     min-height: 26px;
@@ -35,6 +35,13 @@
     color: rgba(225, 225, 225, 0.7);
 }
 
+
+/* khi hover thì hiển thị m */
+
+.header__navbar-item--display-qr:hover .header__navbar--qr {
+    display: block;
+}
+
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
@@ -42,14 +49,15 @@
     align-items: center;
 }
 
-.header__navbar-item--bold{
+.header__navbar-item--bold {
     font-weight: 500;
 }
 
-.header__navbar-item--separate::after{
+.header__navbar-item--separate::after {
     content: "";
     display: block;
-    position: absolute; /* vị trí theo thẻ cha li */
+    position: absolute;
+    /* vị trí theo thẻ cha li */
     height: 15px;
     border-left: solid 1px #fb9086;
     right: -9px;
@@ -58,17 +66,68 @@
     transform: translateY(-50%);
 }
 
-.header__navbar-icon-link{
+.header__navbar-icon-link {
     text-decoration: none;
     color: var(--white-color);
 }
 
-.header__navbar-icon{
+.header__navbar-icon {
     margin: 0 4px;
     font-size: 1.8rem;
 }
 
-.header__navbar-no-pointer{
-    cursor: text;
+.header__navbar-no-pointer {
+    cursor: default;
     color: var(--white-color);
+}
+
+
+/* Header QR */
+
+.header__navbar--qr {
+    position: absolute;
+    background-color: var(--white-color);
+    width: 200px;
+    border-radius: 2px;
+    top: 118%;
+    left: 0;
+    cursor: default;
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.header__navbar-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navbar-app-img {
+    height: 16px;
+}
+
+.header__navbar-app-img {
+    margin: 0 13px;
+}
+
+
+/* tạo lớp giả làm cầu nối */
+
+.header__navbar--qr::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    color: rebeccapurple;
+    top: -14px;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
