@@ -35,10 +35,13 @@
     color: rgba(225, 225, 225, 0.7);
 }
 
-
 /* khi hover thì hiển thị m */
 
 .header__navbar-item--display-qr:hover .header__navbar--qr {
+    display: block;
+}
+
+.header__navbar-item--notify:hover .header__notify{
     display: block;
 }
 
@@ -81,7 +84,6 @@
     color: var(--white-color);
 }
 
-
 /* Header QR */
 
 .header__navbar--qr {
@@ -110,10 +112,105 @@
     margin: 0 13px;
 }
 
-
 /* tạo lớp giả làm cầu nối */
 
 .header__navbar--qr::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    color: rebeccapurple;
+    top: -14px;
+    left: 0;
+}
+
+/* header notification */
+.header__notify {
+    position: absolute;
+    width: 404px;
+    background-color: var(--white-color);
+    top: 118%;
+    right: 0;
+    border: 1px solid #e2d9d9;
+    display: none;
+    animation: zoomIn 0.2s linear;
+}
+
+.header__notify-header {
+    height: 40px;
+}
+
+.header__notify-header:hover{
+    cursor: default;
+}
+
+.header__notify-header h3 {
+    color: #b5b0b0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 10px;
+    line-height: 40px; /* căn giữa line-height = height cha */
+}
+
+.header__notify-list {
+    padding: 0;
+    background-color: rgba(255,87,34,0.1);
+    list-style: none;
+}
+
+.header__notify-item {
+    padding: 5px 10px 15px 0;
+}
+
+.header__notify-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.header__notify-item:hover {
+    background-color: #f5f5f5;
+}
+
+.header__notify-img{
+    width: 48px;
+    padding-left: 10px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__notify-title {
+    color: var(--black-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.header__notify-content {
+    font-size: 1.2rem;
+    color: #938f8f;
+    margin-top: 3px;
+}
+
+.header__notify-footer {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__notify-footer-link {
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 400;
+}
+
+/* tạo lớp giả làm cầu nối */
+.header__notify::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -129,5 +226,14 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from{
+        transform: scale(0, 0);
+    }
+    to{
+        transform: scale(1, 1);
     }
 }

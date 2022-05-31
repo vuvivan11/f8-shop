@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- reset css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <!-- fontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- main css -->
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -34,25 +36,65 @@
                                     <img src="./assets/img/qr-app.png" />
                                 </div>
                                 <div class="header__navbar-app">
-                                    <div><img class="header__navbar-app-img" src="./assets/img/app-store.png" alt="" /></div>
-                                    <div><img class="header__navbar-app-img" src="./assets/img/google-play.png" alt="" /></div>
+                                    <div><img class="header__navbar-app-img" src="./assets/img/app-store.png" alt="" />
+                                    </div>
+                                    <div><img class="header__navbar-app-img" src="./assets/img/google-play.png"
+                                            alt="" /></div>
                                 </div>
                             </div>
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-no-pointer">Kết nối</span>
-                            <a href="/" class="header__navbar-icon-link"><i class="header__navbar-icon fa-brands fa-facebook"></i
-                ></a>
-                            <a href="/" class="header__navbar-icon-link"><i class="header__navbar-icon fa-brands fa-instagram"></i
-                ></a>
+                            <a href="/" class="header__navbar-icon-link"><i
+                                    class="header__navbar-icon fa-brands fa-facebook"></i></a>
+                            <a href="/" class="header__navbar-icon-link"><i
+                                    class="header__navbar-icon fa-brands fa-instagram"></i></a>
                         </li>
                     </ul>
 
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
-                            <a class="header__navbar-item-link" href="/">
-                                <i class="header__navbar-icon fa-solid fa-bell"></i> Thông báo
-                            </a>
+                            <div class="header__navbar-item-link header__navbar-item--notify" href="/">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                                <div class="header__notify">
+                                    <header class="header__notify-header">
+                                        <h3>Thông báo mới nhận</h3>
+                                    </header>
+                                    <ul class="header__notify-list">
+                                        <li class="header__notify-item">
+                                            <a href="/" class="header__notify-link">
+                                                <img class="header__notify-img" src="/assets/img/app-store.png" alt="">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-title">Sản phẩm mới</span>
+                                                    <span class="header__notify-content">Sản phẩm mới ABC</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="/" class="header__notify-link">
+                                                <img class="header__notify-img" src="/assets/img/app-store.png" alt="">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-title">Sản phẩm mới</span>
+                                                    <span class="header__notify-content">Sản phẩm mới ABC</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="/" class="header__notify-link">
+                                                <img class="header__notify-img" src="/assets/img/google-play.png" alt="">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-title">Sản phẩm mới</span>
+                                                    <span class="header__notify-content">Sản phẩm mới ABC</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <footer class="header__notify-footer">
+                                        <a href="/" class="header__notify-footer-link">Xem tất cả</a>
+                                    </footer>
+                                </div>
+                            </div>
                         </li>
                         <li class="header__navbar-item">
                             <a class="header__navbar-item-link" href="/">
