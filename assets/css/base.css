@@ -2,6 +2,8 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -31,6 +33,28 @@ html{
 .grid__full-width {
     /* không muốn sử dụng màn hình 1200px */
     width: 100%;
+}
+
+/* Button style */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 
